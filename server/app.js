@@ -11,7 +11,7 @@ require('./configs/session.config')(app)
 
 
 
-app.use('/', require('./routes/index'));
+
 app.use('/api/auth', require('./routes/auth.routes'))
 app.use('/api/activities', require('./routes/activities.routes'))
 app.use('/api/roles', require('./routes/roles.routes'))

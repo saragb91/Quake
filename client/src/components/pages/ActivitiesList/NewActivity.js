@@ -16,9 +16,6 @@ const emptyActivity = {
 };
 
 
-//import FilesServices from '../../../services/files.services'
-
-
 class NewActivity extends Component {
     constructor() {
         super()
