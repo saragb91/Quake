@@ -6,7 +6,8 @@ import ActivitiesCard from './ActivitiesCard'
 //BOOTSTRAP
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-
+//CSS
+import './ActivitiesList.css'
 
 class ActivitiesList extends Component {
     constructor() {
@@ -28,7 +29,7 @@ class ActivitiesList extends Component {
 
     render() {
         return (
-            <Container>
+            <Container className="activities-list">
              
                 {this.state.activities.length ? (
                     <Row>

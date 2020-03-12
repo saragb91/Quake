@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default class ActivityServices {
+export default class ActivityService {
 
     constructor() {
         this.service = axios.create({

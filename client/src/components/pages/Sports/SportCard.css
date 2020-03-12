@@ -1,0 +1,10 @@
+.card-sport img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-sport {
+    margin: 40px 0;
+    background-color: #bcebf02e;
+    text-align: center;
+}

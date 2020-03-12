@@ -16,17 +16,30 @@ router.get('/getAllBooking', (req, res, next) => {
 router.post('/newBooking', (req, res, next) => {
     console.log(req.body, "el body")
     Booking.create(req.body)
-        .then(createBooking => res.json(createBooking))
+        .then(()=>{
+            Activity.findByIdAndUpdate(req.body.activityId, { $push: { peopleBooking: req.body.userId } }, { new: true })
+              
+                .then(updateBooking => res.json(updateBooking))
+                .catch(err => next(err))})
         .catch(err => next(err))
 
-    Activity.findByIdAndUpdate(req.body.activityId, { $push: { peopleBooking: req.body.userId } }, { new: true })
-        .populate('peopleBooking')
-        .then(updateBooking => res.json(updateBooking))
-        .catch(err => next(err))
-        //es posible que el error venga dado porque no se pueden enviar dos json
-        //la solucion seria meter el activity.findby... dentro del then del Bookin.create..
-
+      
 })
+
+
+
+// router.post('/newBooking', (req, res, next) => {
+//     console.log(req.body, "el body")
+//     Booking.create(req.body)
+//         .then(createBooking => res.json(createBooking))
+//         .catch(err => next(err))
+
+//     Activity.findByIdAndUpdate(req.body.activityId, { $push: { peopleBooking: req.body.userId } }, { new: true })
+//         .populate('peopleBooking')
+//         .then(updateBooking => res.json(updateBooking))
+//         .catch(err => next(err))
+
+// })
 
 router.get('/getOwnBooking/:userId', (req, res, next) => {
     Booking.find({ userId: req.params.userId })
@@ -37,7 +50,8 @@ router.get('/getOwnBooking/:userId', (req, res, next) => {
 
 router.get('/getCompanyBooking/:activities', (req, res, next) => {
     Activity.find({ company: req.params.activities })
-        .then(bookActivity => res.json(bookActivity))
+        .populate('peopleBooking')
+        .then(bookActivity =>res.json(bookActivity))
         .catch(err => next(err))
 })
 

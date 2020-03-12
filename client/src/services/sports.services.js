@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default class Services {
+export default class SportService {
 
     constructor() {
         this.service = axios.create({
@@ -10,5 +10,5 @@ export default class Services {
 
     }
     getAllSports = () => this.service.get('/getAllSports').then(response => response.data)
-  
+
 }

@@ -1,20 +1,24 @@
 import React from 'react'
-//BOOTSTRAP
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
+
 //ROUTER
-import { Link } from 'react-router-dom'
+
+import './Index.css';
 
 
 const Index = props => {
     return (
-        <>
 
-                   <h1>Quake</h1>
+        <section>
+       
+            <div className="quake">
+            <h1>Quake</h1>
+            <h4>Ten siempre a mano Quake: tu web para sentirte vivo.</h4>
+            <h6> Una forma ágil y sencilla de tener una aventura siempre entre manos. Contacta con nuestras empresas de aventura  </h6>
+            
+            <a className="btnIndex" href='/getAllActivities'>Inspírame</a>
 
-                   <h4>Ten siempre a mano Quake: tu web para sentirte vivo.</h4>
-                    <h6> Una forma ágil y sencilla de tener una aventura siempre entre manos. Contacta con nuestras empresas de aventura  </h6>
-        </>
+            </div>
+        </section>
     )
 }
 

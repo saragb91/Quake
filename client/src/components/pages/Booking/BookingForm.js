@@ -70,7 +70,7 @@ class BookingForm extends Component {
                         min="2020-01-01" max="2020-12-31" />
                 </Form.Group>
 
-                <Button variant="dark" type="submit"><Link to="/mybookings">Sus reservas</Link></Button>
+                <Button variant="dark" type="submit"></Button>
             </Form>
 
         )

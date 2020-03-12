@@ -49,8 +49,7 @@ class App extends Component {
     return (
       <>
 
-        {<Navigation user={this.state.user} fetchUser={this.fetchUser} />}
-        <a href='/getAllActivities'>Ínspirame</a>
+        {<Navigation user={this.state.user} setTheUser={this.setTheUser} fetchUser={this.fetchUser} />}
 
         <Switch>
 
@@ -62,7 +61,7 @@ class App extends Component {
           <Route path="/getAllSports" render={props => <SportsList {...props} />} />
           <Route path="/getAnActivity/:sport" render={match => <AnSportsList {...match} />} />
           <Route path="/mybookings" render={match => <BookingUser user={this.state.user} {...match} />} />
-          <Route path="/getCompanyBooking/:activities" render={match =><BookingUser user={this.state.user}{...match} />} />
+          <Route path="/getCompanyBooking/:activities" render={match => <BookingUser user={this.state.user}{...match} />} />
           <Route path="/" render={props => <Index {...props}/>} />
         </Switch>
 

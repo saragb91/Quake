@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 
+//CSS
+import './BookUserCard.css'
 
 const BookingCard = ({ people, date, activityId}) => {
     
@@ -12,7 +14,7 @@ const BookingCard = ({ people, date, activityId}) => {
 
         <Col md={4}>
 
-            <Card>
+            <Card className="card-booking">
                 <Card.Title><Link to={`/getOneActivity/${activityId._id}`}>{activityId.activity}</Link></Card.Title>
                     <Card.Text>{activityId.company}</Card.Text>
                     <Card.Text>{people} personas</Card.Text>

@@ -1,0 +1,25 @@
+.quake{
+    font-family: "Bellota", sans-serif;
+    background-image: url("../../../image/conifera.jpg");
+    background-repeat: no-repeat;
+    padding:150px;
+    text-align: center;
+}
+
+.btnIndex{
+    border: solid 1px rgb(79, 149, 9);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: rgb(79, 149, 9);  
+}
+
+.quake h1{
+    font-size: 5em;
+    color:white;
+}
+
+.quake h1, h4, h6{
+    color:white;
+    padding: 20px;
+}

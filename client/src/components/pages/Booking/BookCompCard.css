@@ -1,0 +1,14 @@
+
+.card-company {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #e7eded;
+}
+
+.card-title{
+    color:#646ea6;
+}
+
+.card-company p{
+    color:rgb(43, 136, 188);
+}

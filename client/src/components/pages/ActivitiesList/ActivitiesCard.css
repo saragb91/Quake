@@ -1,0 +1,9 @@
+.card-activity img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-activity {
+    margin: 40px 0;
+     font-family: "Exo";
+}

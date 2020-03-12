@@ -114,7 +114,7 @@ authRoutes.get('/loggedin', (req, res, next) => {
         res.status(200).json(req.user);
         return;
     }
-    res.status(401).json({ message: 'Cant find user' });
+    res.status(403).json({ message: 'Unauthorized' });
 });
 
 

@@ -1,0 +1,9 @@
+h1{
+    margin: 50px 0;
+    color:#706363;
+}
+
+.new-booking{
+    text-align: center;
+    background-image: url("../../../image/ola.png");
+}

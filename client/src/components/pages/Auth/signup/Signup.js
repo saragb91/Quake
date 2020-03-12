@@ -5,7 +5,8 @@ import AuthServices from '../../../../services/auth.services'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
-
+//CSS
+import './Signup.css'
 
 class Signup extends Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class Signup extends Component {
                 this.setState({ username: '', password: '' })
                 this.props.setTheUser(theNewUser)
                 this.props.history.push('/')
-             
+
             })
             .catch(err => console.log({ err }))
     }
@@ -41,11 +42,11 @@ class Signup extends Component {
     render() {
         return (
 
-            <Container>
+            <Container className="signup">
 
-                <h1>Registrar usuario</h1>
+                <h2>Registrar usuario</h2>
 
-                <Form onSubmit={this.handleSubmit}>
+                <Form className="form-signup" onSubmit={this.handleSubmit}>
                     <Form.Group>
                         <Form.Label>Usuario</Form.Label>
                         <Form.Control type="text" name="username" value={this.state.username} onChange={this.handleChange} />
@@ -55,9 +56,10 @@ class Signup extends Component {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                     </Form.Group>
-
-                    <Button variant="primary" type="submit">
-                        ¡Regístrate!</Button>
+                    <div className="signup-btn">
+                        <Button type="submit">
+                            ¡Regístrate!</Button>
+                    </div>
                 </Form>
 
             </Container>

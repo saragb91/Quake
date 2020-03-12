@@ -1,0 +1,19 @@
+nav{
+    border-bottom: #b8f2ff solid 1px;
+   
+}
+
+.nav-link{
+    color: grey;
+}
+
+
+a{
+    color:grey;
+    
+}
+
+.navbar-brand{
+    font-family: "Bellota", sans-serif;
+    font-size: 30px;
+}

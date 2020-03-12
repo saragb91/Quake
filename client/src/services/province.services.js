@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default class Services {
+export default class ProvinceService {
 
     constructor() {
         this.service = axios.create({

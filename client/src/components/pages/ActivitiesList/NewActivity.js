@@ -6,6 +6,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 
+import './NewActivities.css'
+
 const emptyActivity = {
     activity: '',
     company: '',
@@ -50,9 +52,9 @@ class NewActivity extends Component {
     render() {
         return (
 
-            <Container>
-
-                <Form>
+            <Container className="forest-activity">
+<h3>Organiza el próximo evento</h3>
+                <Form className="new-activity">
                     <Form.Group>
                         <Form.Label>Actividad</Form.Label>
                         <Form.Control type="text" name="activity" value={this.state.activity.activity} onChange={this.handleChange} />
@@ -78,9 +80,9 @@ class NewActivity extends Component {
                         <Form.Control type="date" name="date" value={this.state.activity.date} onChange={this.handleChange} />
                     </Form.Group>
 
-
-
-                    <Button onClick={this.handleSubmit} variant="dark">Crear nueva actividad</Button>
+                    <div className="div-new"> 
+                        <Button className="btn-new" onClick={this.handleSubmit}>Crear nueva actividad</Button>
+                </div>
                 </Form>
 
             </Container>

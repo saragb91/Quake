@@ -5,13 +5,15 @@ import Card from 'react-bootstrap/Card'
 //ROUTER
 import { Link } from 'react-router-dom'
 
+import './ActivitiesCard.css'
+
 
 const ActivitiesCard = ({ image, activity, company, price, province, _id }) => {
     return (
 
         <Col md={4}>
 
-            <Card>
+            <Card className="card-activity">
                 <Link to={`/getOneActivity/${_id}`}>
                     <Card.Img variant="top" src={image} />
                 </Link>
