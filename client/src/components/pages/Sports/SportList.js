@@ -35,7 +35,9 @@ class SportsList extends Component {
                         {this.state.sports.map(elm => <SportCards key={elm.sport }{...elm} />)}
                     </Row>
                 ) :
-                    <p>Cargando...</p>
+                    <div id="container-charge">
+                        <div id="charge"></div>
+                    </div>
                 }
             </Container>
         )

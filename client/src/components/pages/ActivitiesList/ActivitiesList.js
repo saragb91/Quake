@@ -36,7 +36,9 @@ class ActivitiesList extends Component {
                         {this.state.activities.map(elm => <ActivitiesCard key={elm._id}{...elm} />)}
                     </Row>
                 ) :
-                    <p>Cargando...</p>
+                <div id="container-charge">
+                  <div id="charge"></div>  
+                </div>
                 }
             </Container>
         )
