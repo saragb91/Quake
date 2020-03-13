@@ -17,13 +17,13 @@ const SportCards = ({ image, sport }) => {
         <Col md={4}>
 
             <Card className="card-sport">
+                
                 <Link to={`/getAnActivity/${sport}`}>
                     <Card.Img variant="top" src={image} />
                 </Link>
                 <Card.Body>
                     <Card.Title>{sport}</Card.Title>
-                </Card.Body>
-               
+                </Card.Body> 
 
             </Card>
 

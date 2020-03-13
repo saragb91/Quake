@@ -3,34 +3,30 @@ import GoogleMapReact from 'google-map-react'
 //CSS
 import Marker from './Marker'
 
-const Map = ({lat,leng, name }) =>{
+const Map = ({ lat, leng, name }) => {
 
 
-        return (
-            <div style={{ height: '400px', width: '80%' }}>
-                {lat ?
-                    <GoogleMapReact
-                        bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
-                        center={[lat,leng]}
-                        zoom={16}
+    return (
+        <div style={{ height: '400px', width: '80%', marginLeft: '10%' }}>
+            {lat ?
+                <GoogleMapReact
+                    bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
+                    center={[lat, leng]}
+                    zoom={16}
+                >
+                    <Marker
+                        lat={lat}
+                        lng={leng}
+                        text={name}
+                        color="blue"
+                    />
 
-                    >
-                        <Marker
-                            lat={lat}
-                            lng={leng}
-                            text={name}
-                            color="blue"
-
-                        />
-
-
-                    </GoogleMapReact>
-                    :
-                    null
-                }
-            </div>
-        )
-    }
+                </GoogleMapReact>
+                :
+                null}
+        </div>
+    )
+}
 
 
 export default Map

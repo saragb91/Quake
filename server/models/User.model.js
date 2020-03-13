@@ -7,20 +7,20 @@ const userSchema = new Schema({
     companyName: String,
     role: {
         type: String,
-        enum: ['ADMIN', 'COMPANY','CLIENT'],
+        enum: ['ADMIN', 'COMPANY', 'CLIENT'],
         default: 'CLIENT',
-
     },
+    
     booking: {
         type: Schema.Types.ObjectId,
-        ref:'Booking'},
-    
+        ref: 'Booking'
+    },
+
     activity: {
         type: Schema.Types.ObjectId,
-        ref: "Activity"}
-    
-    
-},{ 
+        ref: "Activity"
+    }
+}, {
 
     timestamps: true
 });

@@ -29,8 +29,8 @@ const UserNavbar = props =>
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
                 <Nav.Link as="div"> <Link to="/getAllSports">Deportes</Link></Nav.Link>
-                <Nav.Link as="div"> <Link to="/">Provincias</Link></Nav.Link>
                 <Nav.Link as="div"> <Link to="/mybookings">Próximas aventuras</Link></Nav.Link>
+                <Nav.Link as="div"> <Link to="/getAllEvents">Tablón de eventos</Link></Nav.Link>
                 <Nav.Link as="div"> <Link to="/" onClick={props.logout}>Cerrar sesión</Link></Nav.Link>
             </Nav>
         </Navbar.Collapse>
@@ -40,6 +40,7 @@ const UserNavbar = props =>
 const WithoutLogin = props =>
 
     <Navbar bg="white" expand="md">
+        <Navbar.Brand href="/">Quake</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
                 <Nav.Link as="div"> <Link to="/signup">Registro</Link></Nav.Link>

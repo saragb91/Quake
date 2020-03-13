@@ -7,8 +7,7 @@ export default class SportService {
             baseURL: `${process.env.REACT_APP_URL}/sports`,
             withCredentials: true
         })
-
     }
-    getAllSports = () => this.service.get('/getAllSports').then(response => response.data)
 
+    getAllSports = () => this.service.get('/getAllSports').then(response => response.data)
 }

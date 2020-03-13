@@ -6,9 +6,7 @@ import Card from 'react-bootstrap/Card'
 //CSS
 import './BookCompCard.css'
 
-const BookingCompanyCard = ({ activity, peopleBooking, id, user, people, date }) => {
-
-   
+const BookingCompanyCard = ({ activity, peopleBooking, people, date }) => {
 
     return (
 
@@ -16,11 +14,9 @@ const BookingCompanyCard = ({ activity, peopleBooking, id, user, people, date })
 
             <Card className="card-company">
                 <Card.Title>{activity}</Card.Title>
-                <Card.Text> {peopleBooking.map(elm=> <p>{elm.username}</p>)}</Card.Text>
-                <Card.Text>{people} personas</Card.Text>
+                <Card.Text> {peopleBooking.map(elm => <p>{elm.username}</p>)}</Card.Text>
+                <Card.Text>{people}</Card.Text>
                 <Card.Text>{date}</Card.Text>
-                {/* <Card.Text>{userId.username}</Card.Text> */}
-
             </Card>
 
         </Col>

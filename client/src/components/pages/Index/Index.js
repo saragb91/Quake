@@ -1,22 +1,21 @@
 import React from 'react'
-
-//ROUTER
-
+//CSS
 import './Index.css';
 
 
 const Index = props => {
+    const button = props && props.user ? (<a className="btnIndex" href='/getAllActivities'>Inspírame</a>):null
+
     return (
 
         <section>
        
             <div className="quake">
             <h1>Quake</h1>
-            <h4>Ten siempre a mano Quake: tu web para sentirte vivo.</h4>
-            <h6> Una forma ágil y sencilla de tener una aventura siempre entre manos. Contacta con nuestras empresas de aventura  </h6>
-            
-            <a className="btnIndex" href='/getAllActivities'>Inspírame</a>
-
+            <h4>Ten siempre a mano Quake: tu web para inyectarte adrenalina .</h4>
+            <h6> Una forma ágil y sencilla de tener una aventura siempre entre manos. Date prisa y reserva algunas de las actividades que te harán temblar </h6>
+      {button}
+     
             </div>
         </section>
     )

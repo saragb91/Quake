@@ -4,7 +4,8 @@ import BookingServices from '../../../services/booking.services'
 //BOOTSTRAP
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { Link } from 'react-router-dom'
+//CSS
+import './BookingForm.css'
 
 
 class BookingForm extends Component {
@@ -16,9 +17,9 @@ class BookingForm extends Component {
                 people: "",
                 date: "",
             },
-     
         }
     }
+
     finishAction = () => {
         this.props.closeModal()
         this.props.refreshList()
@@ -29,15 +30,12 @@ class BookingForm extends Component {
             ...this.state.booking,
             activityId: this.props.activityId,
             userId: this.props.userId,
-            
         };
-        
-        
-        
+
+
         this.BookingServices.postBooking(newBooking)
-        .then(() => this.finishAction())
-        .catch(err => console.log(err))
-      
+            .then(() => this.finishAction())
+            .catch(err => console.log(err))
     }
 
     handleChange = e => {
@@ -45,7 +43,6 @@ class BookingForm extends Component {
         this.setState({
             booking: { ...this.state.booking, [name]: value }
         })
-
     }
 
     handleSubmit = e => {
@@ -58,21 +55,20 @@ class BookingForm extends Component {
 
         return (
             <Form onSubmit={this.handleSubmit}>
-        
+
                 <Form.Group>
                     <Form.Label>Número de personas</Form.Label>
                     <Form.Control type="number" name="people" value={this.state.booking.people} onChange={this.handleChange} />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Escoja fecha de reserva</Form.Label>
+                    <Form.Label className="label-form">Escoja fecha de reserva</Form.Label>
                     <input type="date" name="date" value={this.state.booking.date} onChange={this.handleChange}
-
-                        min="2020-01-01" max="2020-12-31" />
+                        min="2020-03-13" max="2020-12-31" />
                 </Form.Group>
-
-                <Button variant="dark" type="submit"></Button>
+                <div className="btn-booking">
+                    <Button className="btn-form" variant="dark" type="submit">Reservar</Button>
+                </div>
             </Form>
-
         )
     }
 }

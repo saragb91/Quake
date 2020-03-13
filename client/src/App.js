@@ -9,9 +9,10 @@ import Signup from './components/pages/Auth/signup/Signup'
 // ACTIVITIES COMPONENTS
 import ActivitiesList from './components/pages/ActivitiesList/ActivitiesList'
 import ActivitiesDetails from './components/pages/ActivitiesDetails/ActivitiesDetails'
-import NewActivity from './components/pages/ActivitiesList/NewActivity'
+import EventsList from './components/pages/EventsList/EventsList'
 import BookingUser from './components/pages/BookingPage/BookingUser'
 import Index from './components/pages/Index/Index'
+import NewEvent from './components/pages/NewEvent/NewEvent'
 
 //NAVIGATION COMPONENT
 import Navigation from './components/ui/NavBar'
@@ -47,24 +48,24 @@ class App extends Component {
 
   render() {
     return (
+      
       <>
 
         {<Navigation user={this.state.user} setTheUser={this.setTheUser} fetchUser={this.fetchUser} />}
 
         <Switch>
-
           <Route path="/login" render={props => <Login setTheUser={this.setTheUser} {...props} />} />
           <Route path="/signup" render={props => <Signup setTheUser={this.setTheUser} {...props} />} />
           <Route path="/getAllActivities" render={props => <ActivitiesList {...props} />} />
           <Route path="/getOneActivity/:id" render={match => <ActivitiesDetails user={this.state.user} {...match} />} />
-          <Route path="/new" render={props => <NewActivity {...props} />} />
+          <Route path="/getAllEvents" render={props => <EventsList {...props} />} />
+          <Route path="/new" render={props => <NewEvent {...props} />} />
           <Route path="/getAllSports" render={props => <SportsList {...props} />} />
           <Route path="/getAnActivity/:sport" render={match => <AnSportsList {...match} />} />
           <Route path="/mybookings" render={match => <BookingUser user={this.state.user} {...match} />} />
           <Route path="/getCompanyBooking/:activities" render={match => <BookingUser user={this.state.user}{...match} />} />
-          <Route path="/" render={props => <Index {...props}/>} />
+          <Route path="/" render={match => <Index user={this.state.user} {...match} />} />
         </Switch>
-
 
       </>
     )

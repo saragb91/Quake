@@ -27,7 +27,6 @@ class AnSportsList extends Component {
 
             })
             .catch(err => console.log(err))
-
     }
 
 

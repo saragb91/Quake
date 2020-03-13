@@ -20,7 +20,7 @@ class BookingUser extends Component {
     }
 
     componentDidMount = () => this.getBookings(this.props.user);
-    
+
     shouldComponentUpdate = (nextProps, nextState) => {
         if (nextProps.user !== this.props.user) {
             this.getBookings(nextProps.user);
@@ -44,30 +44,23 @@ class BookingUser extends Component {
                 .then(bookings => this.setState({ bookings }))
                 .catch(err => console.log(err))
         }
-
     }
 
-
+    
     render() {
         console.log(this.state.bookings);
         return (
             this.state.bookings ?
 
                 <Container className="new-booking">
-                    {/* (this.state.bookings.map(elm => <BookCompCard key={elm._id}{...elm} />))} */}
 
                     <h1>Tus reservas</h1>
                     <Row>
-
                         {this.state.bookings.length && this.props.user && this.props.user.role === 'CLIENT' ?
                             this.state.bookings.map(elm => <BookingCards key={elm._id}{...elm} />) :
                             this.state.bookings.map(elm => <BookCompCard key={elm._id}{...elm} info={() => this.getCompanyActivities(elm.people)} />)}
-                        {/* //key={elm.sport}{...elm} info={() => this.getAnActivity(elm.sport)} */}
-                        {/* {(this.props.user && this.props.user.role === 'CLIENT') ? this.state.bookings.map(elm => <BookingCards key={elm._id}{...elm} />) : this.state.bookings.map(elm => <BookCompCard info={() => this.getBookings(elm)}key={elm._id}{...elm} />)} */}
-                        {/* {this.props.user && this.props.user.companyName ? (this.state.bookings.map(elm => <BookCompCard key={elm._id}{...elm} />)) : null} */}
                     </Row>
                 </Container> : null
-
         )
     }
 }

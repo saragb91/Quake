@@ -1,9 +1,9 @@
 const express = require('express');
 const authRoutes = express.Router();
-
+//CONFIGS
 const passport = require('passport');
 const bcrypt = require('bcrypt');
-
+//MODELS
 const User = require('../models/User.model')
 
 
@@ -66,10 +66,6 @@ authRoutes.post('/signup', (req, res, next) => {
         });
     });
 });
-
-
-
-
 
 
 authRoutes.post('/login', (req, res, next) => {

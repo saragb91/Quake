@@ -8,13 +8,12 @@ h3{
     margin:50px;
     font-weight: 600;
 }
+
 .forest-activity{
     background-image: url("../../../image/forest.jpg");
-    /* background-repeat: no-repeat; */
     padding:50px;
     width: 100%;
     margin:0 auto
-    /* background-size: cover; */
 }
 
 .btn-dark{
@@ -32,10 +31,10 @@ h3{
 
 .btn-new{
     background-color: rgb(70, 97, 64);
-    margin-top:30px
-    
+    margin-top:30px  
 }
 
 .div-new{
     text-align: center;
 }
+

@@ -29,7 +29,6 @@ class Signup extends Component {
                 this.setState({ username: '', password: '' })
                 this.props.setTheUser(theNewUser)
                 this.props.history.push('/')
-
             })
             .catch(err => console.log({ err }))
     }
@@ -57,8 +56,7 @@ class Signup extends Component {
                         <Form.Control type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                     </Form.Group>
                     <div className="signup-btn">
-                        <Button type="submit">
-                            ¡Regístrate!</Button>
+                        <Button type="submit">¡Regístrate!</Button>
                     </div>
                 </Form>
 

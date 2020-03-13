@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Activity = require('../models/Activity.model');
-const Sport= require('../models/Sport.model')
+const Sport = require('../models/Sport.model')
 require("dotenv").config()
 
 mongoose.connect(`${process.env.DB}`, { useNewUrlParser: true })
@@ -37,6 +37,66 @@ const activities = [
             lat: 40.672117,
             leng: -4.089342,
             name: "Akenay",
+        },
+    },
+    {
+        company: "Beloaventura",
+        activity: "Barranquismo",
+        price: 35,
+        duration: 3,
+        difficulty: "alta",
+        description: "El barranco más visitado es el de Pedroso, que es ideal para los grupos que quieren divertirse y vivir fuertes sensaciones rapelando sus cascadas. Hay más opciones como, Cañón de Leza, Llano de la Casa, Cárdenas, Puente Ra, Najerilla, etc. No es necesaria experiencia.",
+        image: "https://cdn.pixabay.com/photo/2015/02/26/12/07/sport-650211_960_720.jpg",
+        province: "Soria",
+        map: {
+            lat: 41.761576,
+            leng: -2.628059,
+            name: "Beloaventura",
+        },
+    },
+    {
+        company: "Los Barrancos",
+        activity: "Barranquismo",
+        price: 45,
+        duration: 4,
+        difficulty: "media",
+        description: "El Descenso de Barrancos de barrancos es una disciplina deportiva que tiene un gran número de seguidores en Cuenca. Su geografía y su entorno hacen que Cuenca y alrededores sean un lungar ideal para la práctica de este deporte. Dispone de un buen abanico de posibilidades y niveles, pudiendo disfrutar de esta actividad desde los mas pequeños hasta los mas mayores.",
+        image: "https://cdn.pixabay.com/photo/2016/11/11/11/09/canyoning-descent-1816416_960_720.jpg",
+        province: "Cuenca",
+        map: {
+            lat: 39.921570,
+            leng: -2.142950,
+            name: "Los Barrancos",
+        },
+    },
+    {
+        company: "Alto Tajo",
+        activity: "Barranquismo",
+        price: 40,
+        duration: 3,
+        difficulty: "media",
+        description: "Entre los Parques Naturales del Alto Tajo en Guadalajara y la Serranía de Cuenca, existen varios barrancos acuáticos y secos de una belleza inimaginable. Descenderemos por los cañones haciendo rápeles (bajada con cuerdas), saltando y nadando, siempre con la mayor seguridad gracias a nuestros monitores especializados, y casi siempre sin otra compañía que los buitres y los pinos en barrancos muy desconocidos.",
+        image: "https://cdn.pixabay.com/photo/2015/02/26/12/07/sport-650212_960_720.jpg",
+        province: "Guadalajara",
+        map: {
+            lat: 40.529458,
+            leng: -3.031265,
+            name: "Alto Tajo",
+        },
+    },
+    {
+        company: "Canoe",
+        activity: "Barranquismo",
+        price: 35,
+        duration: 3.5,
+        difficulty: "alta",
+        description: "La sensación de aventura comienza al llegar a las instalaciones. El barranco está a diez minutos de nuestra base en Panes y solo otros diez minutos de aproximación (recorrido desde el vehículo a la cabecera del barranco) por el antiguo camino que une Navedo con la Hermida y Potes. Tras las instrucciones del guía, una cascada nos recibe dándonos una refrescante ducha. Es el comienzo de una jornada llena de sorpresas, toboganes y chapuzones.",
+        image: "https://cdn.pixabay.com/photo/2015/06/28/21/06/mountaineering-824911__340.jpg",
+        province: "Cantabria",
+        map: {
+            lat: 43.142338,
+            leng: -4.937838,
+            name: "Canoe",
         },
     },
     {
@@ -102,7 +162,7 @@ const activities = [
     },
     {
         company: "SoriaAventura",
-        activity: "Vía ferrata",
+        activity: "Vía Ferrata",
         price: 28,
         duration: 2,
         difficulty: "Inicial",
@@ -155,7 +215,7 @@ const activities = [
         image: "https://www.surfhouseasfurnas.com/wp-content/uploads/2018/02/surf-web-1024x768.jpg",
         province: "Asturias",
         map: {
-            lat: 43.540823, 
+            lat: 43.540823,
             leng: -5.655616,
             name: "Espumeru",
         },
@@ -167,12 +227,57 @@ const activities = [
         duration: 1,
         difficulty: "Todos los niveles",
         description: "Asturias es un lugar ideal para surfear todo el año. Con rompientes para todos los gustos y una costa variopinta donde la imprevisibilidad de la próxima ola, ésa que alimenta la adrenalina surfera, es tan fascinante o más que en cualquier otro litoral. Asturias tiene además su propia historia del surf.",
-        image: "https://www.surfhouseasfurnas.com/wp-content/uploads/2018/02/surf-web-1024x768.jpg",
+        image: "https://cdn.pixabay.com/photo/2016/03/09/15/16/wave-1246560_960_720.jpg",
         province: "Asturias",
         map: {
             lat: 43.540823,
             leng: -5.655616,
-            name: "Espumeru",
+            name: "Hopupu",
+        },
+    },
+    {
+        company: "Bastiaguero",
+        activity: "Surf",
+        price: 20,
+        duration: 1,
+        difficulty: "Todos los niveles",
+        description: "A 10 minutos de A Coruña, nuestra escuela de surf está situada a pie de playa, con vestuarios, duchas de agua caliente, albergue para material, zona de espera y porche con vistas al mar, todo esto en una de las playas más transitadas durante todo el año por los surfistas.",
+        image: "https://cdn.pixabay.com/photo/2019/04/22/04/32/blue-4145659_960_720.jpg",
+        province: "A Coruña",
+        map: {
+            lat: 43.343075,
+            leng: -8.356618,
+            name: "Bastiaguero",
+        },
+    },
+    {
+        company: "Latas Surf",
+        activity: "Surf",
+        price: 30,
+        duration: 1.5,
+        difficulty: "Todos los niveles",
+        description: "Latas Surf se encuentra a tan solo 5 minutos andando de la playa de Somo, en Cantabria, uno de los mejores lugares de Europa para practicar surf.  Es un sueño hecho realidad, creado por surfistas que quieren compartir su pasión y estilo de vida con todos aquellos que quieran probarlo. Nuestro equipo se asegurará de que aproveches al máximo tu tiempo en las olas pero también que continues divirtiéndote fuera del agua. Barbacoas, fiestas en barco, skate, entrenamiento funcional, gimnasio, yoga y viajes de surf.",
+        image: "https://cdn.pixabay.com/photo/2016/11/18/18/45/beach-1836366_960_720.jpg",
+        province: "Cantabria",
+        map: {
+            lat: 43.462435,
+            leng: -3.717686,
+            name: "Latas Surf",
+        },
+    },
+    {
+        company: "Yerbabuena Surf",
+        activity: "Surf",
+        price: 30,
+        duration: 1.5,
+        difficulty: "Todos los niveles",
+        description: "Junto al histórico faro de Trafalgar encontramos varias olas en un entorno privilegiado protegidas del poniente.  Una larga derecha perfecta para el longboard que bombea cuando hay mucho mar y marea baja. En la misma playa hay una ola denominada Marisucia indicada para un nivel intermedio a la que acudimos a menudo para dar clases de este nivel y que rompe mejor con marea llena. Cerca hay otros picos de gran calidad para surfistas experimentados.",
+        image: "https://cdn.pixabay.com/photo/2016/02/18/22/24/surfing-1208255_960_720.jpg",
+        province: "Cádiz",
+        map: {
+            lat: 36.187070,
+            leng: -5.921507,
+            name: "Yerbabuena Surf",
         },
     },
     {
@@ -180,7 +285,7 @@ const activities = [
         activity: "Alpinismo",
         price: 80,
         duration: 8,
-        difficulty: "Todos los niveles",
+        difficulty: "Medio",
         description: "Con nuestros cursos de alpinismo en pirineos podras introducirte en el fascinante mundo del Alpinismo, aquí podrás adquirir los conocimientos necesarios para hacerlo con total seguridad. Tanto si no tienes experiencia, como si quieres afianzar tus conocimientos o adentrarte en las grandes caras nortes, corredores y cascadas de nuestras montañas.",
         image: "https://cdn.pixabay.com/photo/2017/03/07/14/19/mountaineering-2124113_960_720.jpg",
         province: "Huesca",
@@ -188,6 +293,36 @@ const activities = [
             lat: 42.199767,
             leng: -0.340286,
             name: "Agua y Nieve",
+        },
+    },
+    {
+        company: "Extrem",
+        activity: "Alpinismo",
+        price: 90,
+        duration: 10,
+        difficulty: "Alto",
+        description: "Nuestra cordillera tiene infinidad de paredes, valles, rincones por descubrir y ¡vías por escalar! una lista interminable de sueños, ilusiones y experiencias por vivir. Con este programa os queremos acercar a las grandes montañas del Pirineo, tanto en invierno como en verano.",
+        image: "https://cdn.pixabay.com/photo/2017/06/21/13/20/mountain-climber-2427191_960_720.jpg",
+        province: "Huesca",
+        map: {
+            lat: 42.266408,
+            leng: -0.438850,
+            name: "Extrem",
+        },
+    },
+    {
+        company: "PirineoSur",
+        activity: "Alpinismo",
+        price: 130,
+        duration: 10,
+        difficulty: "Alto",
+        description: "¿Quieres prácticar alpinismo técnico? Escaladas alpinas más técnicas con pasajes de hielo y mixto, recorridos por las  rutas clásicas a los picos más emblematicos del Pirineo Aragonés. Nos adentraremos en las entrañas del Valle de Tena, Valle de Aragón, Valle de Hecho, Valle de Ordesa, Pirineo Francés",
+        image: "https://cdn.pixabay.com/photo/2015/06/08/15/29/mountain-climbing-802099_960_720.jpg",
+        province: "Huesca",
+        map: {
+            lat: 42.756517,
+            leng: -0.315123,
+            name: "PirineoSur",
         },
     },
     {
@@ -206,6 +341,51 @@ const activities = [
         },
     },
     {
+        company: "AdrePirineos",
+        activity: "Rafting",
+        price: 45,
+        duration: 2,
+        difficulty: "Alto",
+        description: "Descenso de un tramo típicamente alpino. Muy impresionante, atravesando un espectacular cañón frondoso y escarpado de fuerte pendiente. En cada embarcación descienden un máximo de 6 tripulantes acompañados por un guía y con cada grupo desciende otro guía más manejando una piragüa de seguridad safety-kayak.",
+        image: "https://cdn.pixabay.com/photo/2015/08/11/04/03/rafting-883523_960_720.jpg",
+        province: "Huesca",
+        map: {
+            lat: 42.603458,
+            leng: -0.122370,
+            name: "AdrePirineos",
+        },
+    },
+    {
+        company: "Canoe",
+        activity: "Rafting",
+        price: 40,
+        duration: 4,
+        difficulty: "Medio",
+        description: "El Rafting se realiza en los ríos Cares y Deva en sus tramos altos de aguas bravas. Descendemos en lanchas hinchables de hasta siete participantes más el guía. Es en invierno y primavera cuando nuestros ríos son más caudalosos y las condiciones son optimas para el descenso de rafting.",
+        image: "https://cdn.pixabay.com/photo/2015/04/16/17/02/whitewater-725935_960_720.jpg",
+        province: "Cantabria",
+        map: {
+            lat: 43.142338,
+            leng: -4.937838,
+            name: "Canoe",
+        },
+    },
+    {
+        company: "Akenay",
+        activity: "Rafting",
+        price: 45,
+        duration: 3,
+        difficulty: "Medio",
+        description: "El alto Tormes es con diferencia el mejor río de aguas bravas de la zona centro y el más próximo a la capital de España. En esta zona, el rafting sólo se puede realizar de octubre a junio, siendo los más óptimos los meses de marzo, abril y mayo, no solo por el buen tiempo, sino porque, además, el deshielo propio de la época garantiza el caudal necesario para la adecuada navegación de las balsas.",
+        image: "https://cdn.pixabay.com/photo/2016/07/28/20/47/waterfall-1549639_960_720.jpg",
+        province: "Salamanca",
+        map: {
+            lat: 40.901081,
+            leng: -5.203445,
+            name: "Akenay",
+        },
+    },
+    {
         company: "Oceanus Cádiz",
         activity: "Buceo",
         price: 140,
@@ -218,6 +398,21 @@ const activities = [
             lat: 36.438770,
             leng: -6.140058,
             name: "Oceanus Cádiz",
+        },
+    },
+    {
+        company: "Hondarrabia",
+        activity: "Buceo",
+        price: 100,
+        duration: 4,
+        difficulty: "Inicial",
+        description: "Esta actividad se lleva a cabo de una manera muy controlada. De la mano de un Divecon o un Instructor, realizarás una inmersión completa disfrutando de toda la vida marina, y del contacto con el agua con total seguridad y confort.",
+        image: "https://cdn.pixabay.com/photo/2015/06/17/20/54/diving-813028_960_720.jpg",
+        province: "San Sebastián",
+        map: {
+            lat: 43.314766,
+            leng: -1.989678,
+            name: "Hondarrabia",
         },
     },
     {
@@ -235,11 +430,26 @@ const activities = [
             name: "Fly Zgz",
         },
     },
-   
+    {
+        company: "A vista de globo",
+        activity: "Globo",
+        price: 200,
+        duration: 1,
+        difficulty: "Inicial",
+        description: "Disfrutaremos de una vista hasta ahora desconocida de Cuenca, ciudad declarada Patrimonio de la Humanidad por la UNESCO, descubriremos desde el aire a bordo de nuestro globo aerostático la belleza del casco antiguo, enclavado entre dos espectaculares hoces en plena Naturaleza. ¡Una experiencia que os resultará difícil de olvidar!",
+        image: "https://cdn.pixabay.com/photo/2016/03/09/09/35/baloon-1245886__340.jpg",
+        province: "Cuenca",
+        map: {
+            lat: 40.064463, 
+            leng: -2.139271,
+            name: "A vista de globo",
+        },
+    },
+
 ]
 
 
-const sports=[
+const sports = [
     {
         sport: "Barranquismo",
         image: "https://cdn.pixabay.com/photo/2016/11/11/11/09/jump-1816417_960_720.jpg",
@@ -252,7 +462,7 @@ const sports=[
     },
     {
         sport: "Buggie",
-        image: "https://www.cangasaventura.com/wp-content/uploads/2018/11/buggie5.jpg",
+        image: "https://cdn.pixabay.com/photo/2017/04/06/17/23/buggy-2208873_960_720.jpg",
         groupSport: [""]
     },
     {
@@ -265,7 +475,7 @@ const sports=[
         image: "https://cdn.pixabay.com/photo/2012/10/05/01/51/climbing-59661_960_720.jpg",
         groupSport: [""]
     },
-   
+
     {
         sport: "Buceo",
         image: "https://cdn.pixabay.com/photo/2013/02/25/04/36/diver-85913_960_720.jpg",

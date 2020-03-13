@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     padding:150px;
     text-align: center;
+    
 }
 
 .btnIndex{
@@ -11,7 +12,7 @@
     color: white;
     padding: 12px;
     border-radius: 8px;
-    background-color: rgb(79, 149, 9);  
+    background-color: rgb(79, 149, 9);
 }
 
 .quake h1{
@@ -22,4 +23,8 @@
 .quake h1, h4, h6{
     color:white;
     padding: 20px;
+}
+
+.quake h6{
+    margin-bottom: 30px;
 }

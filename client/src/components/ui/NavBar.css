@@ -1,6 +1,5 @@
 nav{
-    border-bottom: #b8f2ff solid 1px;
-   
+    border-bottom: #b8f2ff solid 1px; 
 }
 
 .nav-link{
@@ -9,8 +8,7 @@ nav{
 
 
 a{
-    color:grey;
-    
+    color:grey;  
 }
 
 .navbar-brand{

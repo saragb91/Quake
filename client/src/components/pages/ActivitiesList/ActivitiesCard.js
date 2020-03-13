@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 //ROUTER
 import { Link } from 'react-router-dom'
-
+//CSS
 import './ActivitiesCard.css'
 
 
@@ -12,8 +12,8 @@ const ActivitiesCard = ({ image, activity, company, price, province, _id }) => {
     return (
 
         <Col md={4}>
-
             <Card className="card-activity">
+                
                 <Link to={`/getOneActivity/${_id}`}>
                     <Card.Img variant="top" src={image} />
                 </Link>
@@ -23,10 +23,8 @@ const ActivitiesCard = ({ image, activity, company, price, province, _id }) => {
                     <Card.Text>{price} €</Card.Text>
                     <Card.Text>{province}</Card.Text>
                 </Card.Body>
-            
 
             </Card>
-
         </Col>
     )
 }

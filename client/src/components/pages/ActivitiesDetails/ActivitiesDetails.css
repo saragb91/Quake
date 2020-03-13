@@ -1,0 +1,39 @@
+.map{
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.div-btn{
+    text-align: center;
+}
+
+.btn-details{
+    background-color:#5b919c;
+    margin-top: 40px;
+}
+
+.body-details{
+    text-align: center;
+}
+
+.row-details{
+    align-items: center;
+}
+
+.activity-details h1{
+    text-align: center;
+    color:#25384a
+}
+
+.activity-details h3{
+   color:#266b7b;
+}
+
+.hr-details{
+    width: 50%;
+    margin-top:80px
+}
+
+.detail-modal{
+    color:#25384a
+}
