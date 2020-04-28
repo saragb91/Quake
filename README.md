@@ -1,6 +1,6 @@
 # Quake
 
-![](https://raw.githubusercontent.com/saragb91/Quake/master/Quake.jpg)
+![](https://raw.githubusercontent.com/saragb91/Quake/master/Quake (1).jpg)
 
 
 Buscador de empresas de turismo aventura. Este proyecto se divide en dos roles:
