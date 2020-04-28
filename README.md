@@ -6,4 +6,4 @@ Buscador de empresas de turismo aventura. Este proyecto se divide en dos roles:
   
   - Rol de empresa: La empresa podrá ver los clientes que se han apuntado en las actividades que ofrece, además podrá crear un tablón para publicar una actividad puntual que va a celebrar.
 
-https://raw.githubusercontent.com/saragb91/Quake/master/Quake.jpg
+![](https://raw.githubusercontent.com/saragb91/Quake/master/Quake.jpg)
